@@ -1,0 +1,20 @@
+-- SQLite 版本（无需手动执行，程序启动时自动建表）
+-- 如需手动创建：sqlite3 ddz.db < schema.sql
+
+CREATE TABLE IF NOT EXISTS user (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    openid VARCHAR(50) NOT NULL UNIQUE,
+    name VARCHAR(50) NOT NULL,
+    sex SMALLINT NOT NULL,
+    avatar VARCHAR(256),
+    date_joined DATETIME DEFAULT CURRENT_TIMESTAMP,
+    last_modified DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS record (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    round TEXT DEFAULT '{}',
+    robot SMALLINT NOT NULL DEFAULT 1,
+    last_modified DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+

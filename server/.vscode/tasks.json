@@ -1,0 +1,13 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "启动斗地主服务器",
+			"type": "shell",
+			"command": "& \"D:/Program Files/python/python.exe\" app.py",
+			"isBackground": true,
+			"problemMatcher": [],
+			"group": "build"
+		}
+	]
+}
